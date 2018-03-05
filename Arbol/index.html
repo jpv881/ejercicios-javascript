@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    let num = parseInt(prompt("Altura"));
+    let arbol = "";
+    let ancho = 0;
+
+
+    for (let i = 0; i < num; i++) {
+      for (let k = 0; k <= num * 2 - 1; k++) {
+        if (k < (num - ancho) || k > (num + ancho)) arbol += " ";
+        else arbol += "*";
+      }
+      arbol += "\n";
+      ancho++;
+    }
+
+    for (let j = 0; j < num / 2; j++) {
+      for (let h = 0; h <= num; h++) {
+        if (h < num) arbol += " ";
+        else arbol += "*";
+      }
+      arbol += "\n";
+    }
+
+    console.log(arbol);
+  </script>
+</body>
+
+</html>
